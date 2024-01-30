@@ -31,9 +31,17 @@ public class CardTrick {
             
             magicHand[i] = c;
         }
-        Card luckyCard = new Card();
-        luckyCard.setValue(2);
-        luckyCard.setSuit(Card.SUITS[3]);
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Enter your card value: ");
+        int val = scanner.nextInt();
+        
+        System.out.print("Enter your card suit (0-3): ");
+        int suit = scanner.nextInt();
+        
+        Card user_card = new Card();
+        user_card.setValue(val);
+        user_card.setSuit(Card.SUITS[suit]);
         
         
         //insert code to ask the user for Card value and suit, create their card
@@ -46,7 +54,7 @@ public class CardTrick {
         
         boolean check = false;
         for (Card card : magicHand) {
-            if (card.getValue() == luckyCard.getValue() && card.getSuit() == luckyCard.getSuit()) {
+            if (card.getValue() == user_card.getValue() && card.getSuit() == user_card.getSuit()) {
                 check = true;
                 break;
             }
