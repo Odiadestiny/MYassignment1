@@ -35,9 +35,9 @@ public class CardTrick {
             magicHand[i] = c;
         }
         System.out.println("Randomly selected cards:");
-        for (Card card : magicHand) {
-            System.out.println("Card value: " + card.getValue());
-            System.out.println("Card suit: " + card.getSuit());
+        for (Card crd : magicHand) {
+            System.out.println("Card value: " + crd.getValue());
+            System.out.println("Card suit: " + crd.getSuit());
             System.out.println();
         Card luckyCard = new Card();
         luckyCard.setValue(2);
