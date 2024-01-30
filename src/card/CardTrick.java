@@ -36,7 +36,7 @@ public class CardTrick {
         }
         System.out.println("Randomly selected cards:");
         for (Card crd : magicHand) {
-            System.out.println(crd.getSuit() + crd.getValue());
+            System.out.println(crd.getSuit() +" "+  crd.getValue());
             System.out.println();
         }
         Card luckyCard = new Card();
