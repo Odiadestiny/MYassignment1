@@ -36,21 +36,14 @@ public class CardTrick {
         //Then report the result here
         // add one luckcard hard code 2,clubs
         
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter your card value: ");
-        int val = scanner.nextInt();
+        Card luckyCard = new Card();
+        luckyCard.setValue(2);
+        luckyCard.setSuit(Card.SUITS[3]);
         
-        System.out.print("Enter your card suit between 0-3: ");
-        int suit = scanner.nextInt();
-        
-        
-        Card user_card = new Card();
-        user_card.setValue(val);
-        user_card.setSuit(Card.SUITS[suit]);
         
         boolean check = false;
         for (Card card : magicHand) {
-            if (card.getValue() == user_card.getValue() && card.getSuit() == user_card.getSuit()) {
+            if (card.getValue() == luckyCard.getValue() && card.getSuit() == luckyCard.getSuit()) {
                 check = true;
                 break;
             }
