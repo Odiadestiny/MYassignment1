@@ -45,11 +45,10 @@ public class CardTrick {
         
         Card user_card = new Card();
         user_card.setValue(val);
-        user_card.setSuit(Card.SUITS[suit]);
         
         boolean check = false;
         for (Card card : magicHand) {
-            if (card.getValue() == user_card.getValue() && card.getSuit().equals(user_card.getSuit())) {
+            if (card.getValue() == user_card.getValue() || card.getSuit().equals(user_card.getSuit()) ) {
                 check = true;
                 break;
             }
