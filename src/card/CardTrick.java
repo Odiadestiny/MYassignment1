@@ -36,9 +36,9 @@ public class CardTrick {
         }
         System.out.println("Randomly selected cards:");
         for (Card crd : magicHand) {
-            System.out.println("Card value: " + crd.getValue());
-            System.out.println("Card suit: " + crd.getSuit());
+            System.out.println(crd.getSuit() + crd.getValue());
             System.out.println();
+        }
         Card luckyCard = new Card();
         luckyCard.setValue(2);
         luckyCard.setSuit(Card.SUITS[3]);
@@ -48,9 +48,6 @@ public class CardTrick {
         // and search magicHand here
         //Then report the result here
         // add one luckcard hard code 2,clubs
-        
-        
-        
         
         boolean check = false;
         for (Card card : magicHand) {
@@ -66,6 +63,5 @@ public class CardTrick {
             System.out.println("Sorry, your card is not in the magic hand.");
         }
     
-    }
-    
+     }
 }
